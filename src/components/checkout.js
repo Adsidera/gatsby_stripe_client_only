@@ -26,7 +26,7 @@ const Checkout = class extends React.Component {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku: product_sku, quantity: 1 }],
-      successUrl: `https//www.vimeo.`,
+      successUrl: `https//www.vimeo.com`,
       cancelUrl: `http://localhost:8000/`,
     })
 
