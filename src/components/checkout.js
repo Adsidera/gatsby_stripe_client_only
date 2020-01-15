@@ -15,6 +15,8 @@ const buttonStyles = {
 
 const STRIPE_TEST_KEY = "pk_test_5gZ2olOlYcVj30LG99LJk0S700YQ2Iu1I5";
 const product_sku = "sku_GYGcOUA60xGkcs"
+const success_url = "https://www.vimeo.com"
+const cancel_url = "https://testliveticket.netlify.com"
 
 const Checkout = class extends React.Component {
 
@@ -26,8 +28,8 @@ const Checkout = class extends React.Component {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
       items: [{ sku: product_sku, quantity: 1 }],
-      successUrl: `https//www.vimeo.com`,
-      cancelUrl: `http://localhost:8000/`,
+      successUrl: success_url,
+      cancelUrl: cancel_url,
     })
 
     if (error) {
