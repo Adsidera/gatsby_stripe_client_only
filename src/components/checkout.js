@@ -5,6 +5,7 @@ const buttonStyles = {
   textAlign: "center",
   color: "#fff",
   outline: "none",
+  marginTop: "1rem",
   padding: "12px 60px",
   boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
   backgroundColor: "rgb(255, 178, 56)",
